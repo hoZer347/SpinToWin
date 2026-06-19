@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AdequateGames
 {
 	[Serializable]
-	public class St_Pl_MainMenu : State<PlayerController>
+	public class St_Pl_MainMenuStartGameSelected : State<PlayerController>
 	{
 		// Runs when this state is entered through Proceed / SetState
 		public override void OnEnter(State lastState)

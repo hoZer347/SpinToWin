@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AdequateGames
 {
 	[Serializable]
-	public class St_Pl_MainMenuExit : State<PlayerController>
+	public class St_EnemySpawnerDisabled : State<EnemySpawner>
 	{
 		// Runs when this state is entered through Proceed / SetState
 		public override void OnEnter(State lastState)
