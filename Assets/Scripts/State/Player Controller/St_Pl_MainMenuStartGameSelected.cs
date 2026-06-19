@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 
@@ -22,7 +23,9 @@ namespace AdequateGames
 		{
 			base.OnUpdate();
 
-			Proceed();
+
+			if (Keyboard.current.spaceKey.wasPressedThisFrame)
+				SetState<St_Pl_Movement>();
 		}
 
 		public override void OnExit(State nextState)

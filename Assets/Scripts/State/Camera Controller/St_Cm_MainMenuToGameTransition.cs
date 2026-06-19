@@ -14,13 +14,15 @@ namespace AdequateGames
 		{
 			base.OnEnter(lastState);
 
-			goalPosition = Focus.playerController.transform.position + Focus.goalOffset;
-			goalDirection = (Focus.playerController.transform.position - Focus.transform.position).normalized;
+
 		}
 
-		public override void OnUpdate()
+		public override void OnPhysics()
 		{
-			base.OnUpdate();
+			base.OnPhysics();
+
+			goalPosition = Focus.playerController.transform.position + Focus.goalOffset;
+			goalDirection = (Focus.playerController.transform.position - Focus.transform.position).normalized;
 
 			Focus.transform.position = Vector3.Lerp(
 				Focus.transform.position,

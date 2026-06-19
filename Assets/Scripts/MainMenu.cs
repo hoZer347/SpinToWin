@@ -17,10 +17,15 @@ namespace AdequateGames
 		[SerializeField] VideoClip ryanVideoClip;
 
 		[SerializeField] PlayerController playerController;
+		[SerializeField] CameraController cameraController;
 
 		private void Start()
 		{
-			btStartGame.onClick.AddListener(() => playerController.Proceed());
+			btStartGame.onClick.AddListener(() =>
+			{
+				cameraController.SetState<St_Cm_MainMenuToGameTransition>();
+				playerController.SetState<St_Pl_MainMenuStartGameSelected>();
+			});
 			btExitGame.onClick.AddListener(() => Application.Quit());
 			//btOptions.onClick.AddListener(() => ???); For now, nice to have
 			btRyan.onClick.AddListener(() =>

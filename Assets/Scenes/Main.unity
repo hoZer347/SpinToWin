@@ -622,13 +622,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603497570}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.23899505, y: -0.11929147, z: 0.029598996, w: 0.9632107}
+  m_LocalPosition: {x: 0, y: 2.95, z: -3.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 27.87, y: -14.12, z: 0}
 --- !u!114 &603497574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,19 +643,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AdequateGames.CameraController
   _startState:
     _state:
-      rid: 7327565945896173684
+      rid: -2
   maxSavedStates: 0
   goalOffset: {x: 0, y: 10, z: -10}
-  transitionSpeed: 0
+  transitionSpeed: 2
   playerController: {fileID: 1897406721}
   references:
     version: 2
     RefIds:
-    - rid: 7327565945896173684
-      type: {class: St_Cm_TrackPlayer, ns: AdequateGames, asm: Assembly-CSharp}
-      data:
-        gameObject: {fileID: 0}
-        stateMachine: {fileID: 0}
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &641736051
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +873,7 @@ MonoBehaviour:
   btRyan: {fileID: 2048050653}
   ryanVideoClip: {fileID: 0}
   playerController: {fileID: 1897406721}
+  cameraController: {fileID: 603497574}
 --- !u!1 &918967045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1140,7 @@ Transform:
   m_GameObject: {fileID: 1048739275}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.35, y: 0.5, z: 0}
+  m_LocalPosition: {x: 12.15, y: 0.5, z: -3.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1820,17 +1818,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AdequateGames.PlayerController
   _startState:
     _state:
-      rid: 7327565945896173682
+      rid: -2
   maxSavedStates: 0
   cameraController: {fileID: 603497574}
+  xSpeed:
+    minSpeed: -10
+    maxSpeed: 10
+    acceleration: 20
+    deceleration: 20
+    friction: 20
+    direction: {x: 1, y: 0, z: 0}
+  zSpeed:
+    minSpeed: -10
+    maxSpeed: 10
+    acceleration: 20
+    deceleration: 20
+    friction: 20
+    direction: {x: 0, y: 0, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: 7327565945896173682
-      type: {class: St_Pl_MainMenu, ns: AdequateGames, asm: Assembly-CSharp}
-      data:
-        gameObject: {fileID: 0}
-        stateMachine: {fileID: 0}
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!65 &1897406722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1919,6 +1928,140 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.8, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2008080383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008080388}
+  - component: {fileID: 2008080387}
+  - component: {fileID: 2008080386}
+  - component: {fileID: 2008080385}
+  - component: {fileID: 2008080384}
+  m_Layer: 0
+  m_Name: Enemy (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &2008080384
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008080383}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2008080385
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008080383}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d6b72d71ed702fe4d9bfb48b52377fee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2008080386
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008080383}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2008080387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008080383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24573c11d7976ef46bce31301450a4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdequateGames.EnemyController
+  _startState:
+    _state:
+      rid: -2
+  maxSavedStates: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+--- !u!4 &2008080388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008080383}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.15, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2190,6 +2333,7 @@ SceneRoots:
   - {fileID: 1545519260}
   - {fileID: 1897406725}
   - {fileID: 1048739276}
+  - {fileID: 2008080388}
   - {fileID: 940792754}
   - {fileID: 1420086424}
   - {fileID: 603497573}
