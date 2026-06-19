@@ -11,6 +11,8 @@ namespace AdequateGames
 		{
 			base.OnEnter(lastState);
 
+			Focus.cameraController.SetState<St_Cm_MainMenuToGameTransition>();
+
 			Push<St_Pl_MainMenuStartGameSelected>();
 			Push<St_Pl_WaitForSpinput>();
 		}

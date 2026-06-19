@@ -545,6 +545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603497573}
+  - component: {fileID: 603497574}
   - component: {fileID: 603497572}
   - component: {fileID: 603497571}
   m_Layer: 0
@@ -628,6 +629,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603497574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603497570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77c443b7ae1a904f98340941cce458a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AdequateGames.CameraController
+  _startState:
+    _state:
+      rid: 7327565945896173684
+  maxSavedStates: 0
+  goalOffset: {x: 0, y: 10, z: -10}
+  transitionSpeed: 0
+  playerController: {fileID: 1897406721}
+  references:
+    version: 2
+    RefIds:
+    - rid: 7327565945896173684
+      type: {class: St_Cm_TrackPlayer, ns: AdequateGames, asm: Assembly-CSharp}
+      data:
+        gameObject: {fileID: 0}
+        stateMachine: {fileID: 0}
 --- !u!1 &641736051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,10 +1795,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897406725}
+  - component: {fileID: 1897406721}
   - component: {fileID: 1897406724}
   - component: {fileID: 1897406723}
   - component: {fileID: 1897406722}
-  - component: {fileID: 1897406721}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1794,6 +1822,7 @@ MonoBehaviour:
     _state:
       rid: 7327565945896173682
   maxSavedStates: 0
+  cameraController: {fileID: 603497574}
   references:
     version: 2
     RefIds:

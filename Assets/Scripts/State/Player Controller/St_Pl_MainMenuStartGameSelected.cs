@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace AdequateGames
@@ -7,30 +8,31 @@ namespace AdequateGames
 	[Serializable]
 	public class St_Pl_MainMenuStartGameSelected : State<PlayerController>
 	{
-		// Runs when this state is entered through Proceed / SetState
+		// Probably gonna include a delay for each button to slide out of the screen
+		// For now, just gonna disable them
+
+		// Also, a camera pan to the player
+
 		public override void OnEnter(State lastState)
 		{
-			
+			base.OnEnter(lastState);
 		}
-			
-		// Runs every frame while this state is active
-		// It's best to put .wasPressedThisFrame / .wasReleasedThisFrame input checks here
+
 		public override void OnUpdate()
 		{
-			
+			base.OnUpdate();
+
+			Proceed();
 		}
 
-		// Runs every physics frame while this state is active
-		// Physics Calculations go here
-		public override void OnPhysics()
-		{
-			
-		}
-
-		// Runs when this state exits through Proceed / SetState
 		public override void OnExit(State nextState)
 		{
-			
+			base.OnExit(nextState);
+
+			MainMenu mainMenu = GameObject.FindAnyObjectByType<MainMenu>();
+
+			foreach (Button button in mainMenu.GetComponentsInChildren<Button>())
+				button.gameObject.SetActive(false);
 		}
 	};
 };
